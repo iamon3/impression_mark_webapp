@@ -14,37 +14,71 @@
   </properties>
 
   <dependencies>
-    <!-- These are needed for embedded version of tomcat. -->	
+	<!-- Apache Httpcomponent's client dependency-->
+	<dependency>
+  		<groupId>org.apache.httpcomponents</groupId>
+  		<artifactId>httpclient</artifactId>
+  		<version>4.3.1</version>
+	</dependency>
+	<dependency>
+  		<groupId>org.apache.httpcomponents</groupId>
+  		<artifactId>httpclient-cache</artifactId>
+  		<version>4.3.1</version>
+	</dependency>
+	<dependency>
+  		<groupId>org.apache.httpcomponents</groupId>
+		<artifactId>httpmime</artifactId>
+  		<version>4.3.1</version>
+	</dependency>
+	<dependency>
+	    <groupId>org.apache.httpcomponents</groupId>
+  		<artifactId>fluent-hc</artifactId>
+  		<version>4.3.1</version>
+	</dependency>
+
+      <!-- Dependencies required to format input and response content. -->
     <dependency>
-        <groupId>org.apache.tomcat.embed</groupId>
-        <artifactId>tomcat-embed-core</artifactId>
-        <version>${tomcat.version}</version>
+        <groupId>org.apache.commons</groupId>
+        <artifactId>commons-io</artifactId>
+        <version>1.3.2</version>
     </dependency>
     <dependency>
-        <groupId>org.apache.tomcat.embed</groupId>
-        <artifactId>tomcat-embed-logging-juli</artifactId>
-        <version>${tomcat.version}</version>
+        <groupId>org.apache.sling</groupId>
+        <artifactId>org.apache.sling.commons.json</artifactId>
+        <version>2.0.6</version>
     </dependency>
-    <dependency>
-        <groupId>org.apache.tomcat.embed</groupId>
-        <artifactId>tomcat-embed-jasper</artifactId>
-        <version>${tomcat.version}</version>
-    </dependency>
-    <dependency>
-        <groupId>org.apache.tomcat</groupId>
-        <artifactId>tomcat-jasper</artifactId>
-        <version>${tomcat.version}</version>
-    </dependency>
-    <dependency>
-        <groupId>org.apache.tomcat</groupId>
-        <artifactId>tomcat-jasper-el</artifactId>
-        <version>${tomcat.version}</version>
-    </dependency>
-    <dependency>
-        <groupId>org.apache.tomcat</groupId>
-        <artifactId>tomcat-jsp-api</artifactId>
-        <version>${tomcat.version}</version>
-    </dependency>
+
+      <!-- These are needed for embedded version of tomcat. -->
+    	<dependency>
+        	<groupId>org.apache.tomcat.embed</groupId>
+        	<artifactId>tomcat-embed-core</artifactId>
+        	<version>${tomcat.version}</version>
+    	</dependency>
+    	<dependency>
+        	<groupId>org.apache.tomcat.embed</groupId>
+        	<artifactId>tomcat-embed-logging-juli</artifactId>
+        	<version>${tomcat.version}</version>
+    	</dependency>
+    	<dependency>
+        	<groupId>org.apache.tomcat.embed</groupId>
+        	<artifactId>tomcat-embed-jasper</artifactId>
+        	<version>${tomcat.version}</version>
+    	</dependency>
+    	<dependency>
+        	<groupId>org.apache.tomcat</groupId>
+        	<artifactId>tomcat-jasper</artifactId>
+        	<version>${tomcat.version}</version>
+    	</dependency>
+    	<dependency>
+        	<groupId>org.apache.tomcat</groupId>
+        	<artifactId>tomcat-jasper-el</artifactId>
+        	<version>${tomcat.version}</version>
+    	</dependency>
+    	<dependency>
+        	<groupId>org.apache.tomcat</groupId>
+        	<artifactId>tomcat-jsp-api</artifactId>
+        	<version>${tomcat.version}</version>
+    	</dependency>
   </dependencies>
 
   <build>
@@ -58,6 +92,7 @@
                 <assembleDirectory>target</assembleDirectory>
                 <programs>
                     <program>
+                        <!-- Class that hanldes Tomcat startup and shutdown. -->
                         <mainClass>launch.Main</mainClass>
                         <name>webapp</name>
                     </program>
