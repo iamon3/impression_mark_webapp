@@ -1,4 +1,4 @@
-This application is a browser based client to the impression_mark services. This web application uses the embedded tomcat approach to launch the server. For illustration visit the following link. 
+This application is a browser based client for the impression_mark services. This web application uses the embedded tomcat approach to launch the server. For illustration visit the following link. 
 
 	https://github.com/heroku/devcenter-embedded-tomcat
 	
