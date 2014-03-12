@@ -39,7 +39,7 @@ Done!  Your browser based client application is up and ready to serve the reques
 
 5)  Make sure that the impresion_mark service is up and running at port 9090. For details, refer pre requisite section. Open any browser and visit the URL.
 
-	http://localhost:8080/hello
+	http://localhost:9090/hello
 	
 6) To stop the server on linux, on terminal where server is started, press
 
